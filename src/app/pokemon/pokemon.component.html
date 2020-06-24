@@ -1,0 +1,13 @@
+<ActionBar title="VIN DIGI" backgroundColor="darkred">
+</ActionBar>
+
+<GridLayout>
+    <ListView [items]="pokemons"> 
+        <ng-template let-item="item">
+            <StackLayout orientation="horizontal" textAlignment="center">
+                <Image src="~/app/images/ini.png" width="20" height="20" textAlignment="center"></Image>
+                <Label [nsRouterLink]="['/pokemon', item.name]" [text]="item.name" textAlignment="center" textTransform="capitalize" fontWeight="bold"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

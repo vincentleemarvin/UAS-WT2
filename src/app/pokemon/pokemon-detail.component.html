@@ -1,0 +1,29 @@
+<ActionBar [title]="'Details of ' + pokemon.name" backgroundColor="darkred"></ActionBar>
+
+<GridLayout rows="auto, auto, auto, " columns=", *" [items]="pokemon">
+
+    <Label [text]="pokemon.name" class="h1 p-l-20" row="0" col="0" colSpan="2" textTransform="capitalize"></Label>
+    <Label text="Stat of this Digimon" class="h3 p-l-20" row="1" col="0" colSpan="2" textTransform="capitalize"></Label>
+    <Image src="~/app/images/ini.png"></Image>
+
+    <GridLayout rows="auto, auto, auto, auto, auto, auto, auto" columns="*, *" row="3" col="0" colSpan="2"
+        backgroundColor="red" class="p-l-20">
+
+        <Label text="Digimon Name" class="font-weight-bold" row="0" col="0"></Label>
+        <Label [text]="pokemon.name" class="text-uppercase" row="0" col="1"></Label>
+
+        <Label text="Digimon Stage" class="font-weight-bold" row="1" col="0"></Label>
+        <Label [text]="pokemon.stage" row="1" col="1"></Label>
+
+        <Label text="Digimon Type" class="font-weight-bold" row="2" col="0"></Label>
+        <Label [text]="pokemon.type" row="2" col="1"></Label>
+
+        <Label text="Digimon Attribute" class="font-weight-bold" row="3" col="0"></Label>
+        <Label [text]="pokemon.attribute" row="3" col="1"></Label>
+
+        <Label text="Digimon Evolve" class="font-weight-bold" row="4" col="0"></Label>
+        <Label [text]="pokemon.digivolvesTo" row="4" col="1"></Label>
+
+    </GridLayout>
+
+</GridLayout>
